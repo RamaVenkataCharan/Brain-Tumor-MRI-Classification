@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura | Advanced MRI Analytics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+    </div>
+
+    <main class="container">
+        <header class="header">
+            <h1 class="logo">Aura</h1>
+            <p class="subtitle">Next-Generation Neural Oncology AI</p>
+        </header>
+
+        <div class="glass-panel main-panel">
+            <div class="upload-section" id="drop-zone">
+                <input type="file" id="file-input" accept="image/*" hidden>
+                <div class="upload-content" id="upload-content">
+                    <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                    </svg>
+                    <h3 class="upload-title">Drag & Drop MRI Scan</h3>
+                    <p class="upload-subtitle">or click to browse from your device</p>
+                    <button class="btn-primary" onclick="document.getElementById('file-input').click()">Select Image</button>
+                </div>
+
+                <div class="preview-content hidden" id="preview-content">
+                    <div class="image-wrapper">
+                        <img id="image-preview" src="" alt="MRI Preview">
+                        <div class="scan-line hidden" id="scan-line"></div>
+                    </div>
+                    <div class="actions">
+                        <button class="btn-secondary" id="btn-reset">Cancel</button>
+                        <button class="btn-primary" id="btn-analyze">Analyze Scan</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-section hidden" id="results-section">
+                <h2 class="results-heading">Analysis Complete</h2>
+                <div class="primary-result">
+                    <span class="label">Detected Class:</span>
+                    <span class="value gradient-text" id="result-class">...</span>
+                </div>
+                
+                <div class="confidence-bars" id="confidence-bars">
+                    <!-- Bars injected via JS -->
+                </div>
+                
+                <button class="btn-secondary mt-4" id="btn-new-scan">New Scan</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
