@@ -17,6 +17,37 @@ Six ImageNet-pretrained backbones are compared head-to-head: **Xception**, **Mob
 - Optional Weights & Biases logging (`--use-wandb`)
 - CUDA + mixed precision support
 
+## Architecture
+
+```mermaid
+graph TD
+    subgraph Preprocessing Pipeline
+        A[Input Image] --> B[Grayscale]
+        B --> C[Gaussian Blur]
+        C --> D[Threshold]
+        D --> E[ROI Crop]
+        E --> F[Resize]
+        F --> G[Replicate to 3-Channel RGB]
+    end
+    
+    subgraph Model Architecture
+        G --> H[Pre-trained Backbone<br>Xception / MobileNetV2 / InceptionV3 / ResNet50 / VGG16 / DenseNet121]
+        H --> I[Global Average Pooling]
+        I --> J[Dropout]
+        J --> K[Dense 128 + ReLU]
+        K --> L[Dropout]
+        L --> M[Dense 4]
+        M --> N[Logits]
+    end
+
+    subgraph Output Classes
+        N --> O[Glioma]
+        N --> P[Meningioma]
+        N --> Q[Pituitary]
+        N --> R[No Tumor]
+    end
+```
+
 ## Project Structure
 
 ```
