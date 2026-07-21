@@ -34,3 +34,10 @@ wandb/
 
 # Kaggle
 .kaggle/
+
+# Next.js and Node.js subprojects
+**/node_modules/
+**/.next/
+**/out/
+**/.env*.local
+
