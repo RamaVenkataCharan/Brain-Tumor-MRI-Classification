@@ -3,7 +3,7 @@
 An advanced, end-to-end deep learning benchmark and clinical visualization dashboard for classifying brain MRI images into **Glioma**, **Meningioma**, **Pituitary**, and **No Tumor**. This project reproduces and extends the transfer-learning methodology described in the peer-reviewed paper:
 
 > **Advanced Brain Tumor Classification in MR Images Using Transfer Learning and Pre-Trained Deep CNN Models**
-> *Disci, Gurcan & Soylu — Cancers 2025, 17, 121.*
+> *Disci, Gurcan & Soylu — Cancers 2025, 17, 121.*       
 
 ---
 
