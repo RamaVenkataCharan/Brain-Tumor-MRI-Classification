@@ -15,7 +15,7 @@ This repository has evolved into a comprehensive multi-tier ecosystem comprising
 ├── api/                       # FastAPI high-performance inference service
 ├── company-site/              # TerraForge: Brand/sustainability marketing portal
 ├── configs/                   # Declarative YAML hyperparameter configurations
-├── data/                      # Dataset ingestion (Raw & Testing splits)
+├── data/                      # Dataset ingestion (Raw & Testing splits)    
 ├── mri-classifier-frontend/   # NeuroScan AI: Scientific R3F clinical dashboard
 ├── scripts/                   # Kaggle downloader & benchmark runners
 ├── src/                       # PyTorch training, evaluation, & preprocessing pipeline
